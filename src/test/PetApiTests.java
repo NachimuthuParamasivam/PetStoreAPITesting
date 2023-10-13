@@ -29,12 +29,12 @@ public class PetApiTests {
 		PetPojo bodyresponse = response.then().extract().response().as(PetPojo.class);
 		dogId.add(bodyresponse.getId());
 		dogName.add(bodyresponse.getName());
-		Assert.assertEquals(statuscode, 200);
+		Assert.assertEquals(statuscode, 100);
 		Assert.assertEquals(pp.getId(), bodyresponse.getId());
 		System.out.println(resp1);// remove finally
 	}
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void updatePet() {
 		DataCreation dc = new DataCreation();
 		PetsController pc = new PetsController();
@@ -50,7 +50,7 @@ public class PetApiTests {
 		System.out.println(resp1);
 	}
 
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void findByStatus() {
 		String status = "sold";
 		PetsController pc = new PetsController();
@@ -63,7 +63,7 @@ public class PetApiTests {
 
 	}
 
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void findById() {
 
 		PetsController pc = new PetsController();
@@ -77,7 +77,7 @@ public class PetApiTests {
 		System.out.println(resp1);
 	}
 
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void updateForm() {
 
 		PetsController pc = new PetsController();
@@ -111,7 +111,7 @@ public class PetApiTests {
 		System.out.println(bodyresponse);
 	}
 
-	//@Test(priority = 6)
+	@Test(priority = 6)
 	public void deleteById() {
 
 		PetsController pc = new PetsController();
