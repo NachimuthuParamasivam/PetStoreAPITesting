@@ -8,9 +8,9 @@ This API automation is built on **Rest-Assured(Selenium-Java)** as a **Maven Pro
 
 **Below test cases are covered:**
 
-Pet module- CREATE pet, UPDATE pet, VIEW pet by status, VIEW pet by ID, UPDATE with form data, Update with image upload and Delete pet
-Store module-CREATE order, VIEW order by purchase id, DELETE order and VIEW Inventory
-User module- CREATE n number of users with Array,GET user, UPDATE user,DELETE user,User Login, User Logout
+1. Pet module- CREATE pet, UPDATE pet, VIEW pet by status, VIEW pet by ID, UPDATE with form data, Update with image upload and Delete pet
+2. Store module-CREATE order, VIEW order by purchase id, DELETE order and VIEW Inventory
+3. User module- CREATE n number of users with Array,GET user, UPDATE user,DELETE user,User Login, User Logout
    
 
 **How to run:**-
