@@ -69,14 +69,13 @@ public class PetsController {
 	}
 
 	public Response uploadImage(int dogId) {
-        String userDir=System.getProperty("user.dir");
+		String userDir = System.getProperty("user.dir");
 		RequestSpecification req1 = new RequestSpecBuilder().setBaseUri("https://petstore.swagger.io")
 				.addHeader("Content-Type", "multipart/form-data").build();
 		Response response = given().spec(req1).param("additionalMetadata", "AddedImage")
-				.multiPart("file", new File(userDir+"//CAR.png")).when()
-				.post("v2/pet/" + dogId + "/uploadImage");
+				.multiPart("file", new File(userDir + "//CAR.png")).when().post("v2/pet/" + dogId + "/uploadImage");
 		// File("/Users//nachi//documents//CAR.png")
-		
+
 		return response;
 
 	}

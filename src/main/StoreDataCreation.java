@@ -1,13 +1,7 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
 
-import pojo.PetPojo;
-import pojo.PetPojoSubCategory;
-import pojo.PetPojotags;
 import pojo.StorePojo;
 
 public class StoreDataCreation {

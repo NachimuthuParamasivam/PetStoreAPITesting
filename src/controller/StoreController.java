@@ -6,7 +6,6 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import pojo.PetPojo;
 import pojo.StorePojo;
 
 public class StoreController {
@@ -25,7 +24,7 @@ public class StoreController {
 		return response;
 
 	}
-	
+
 	public Response findById(int orderId) {
 
 		Response response = given().spec(req).when().get("v2/store/order/" + orderId + "");
@@ -33,7 +32,7 @@ public class StoreController {
 		return response;
 
 	}
-	
+
 	public Response deleteById(int orderId) {
 
 		Response response = given().spec(req).when().delete("v2/store/order/" + orderId + "");
@@ -41,7 +40,7 @@ public class StoreController {
 		return response;
 
 	}
-	
+
 	public Response inventory() {
 
 		Response response = given().spec(req).when().get("v2/store/inventory");
@@ -49,7 +48,7 @@ public class StoreController {
 		return response;
 
 	}
-	
+
 	public Response findByIdLogic() {
 
 		Response response = given().spec(req).when().get("v2/store/inventory");
@@ -57,5 +56,5 @@ public class StoreController {
 		return response;
 
 	}
-	
+
 }

@@ -30,10 +30,10 @@ public class PetApiTests {
 		dogName.add(bodyresponse.getName());
 		Assert.assertEquals(statuscode, 200);
 		Assert.assertEquals(pp.getId(), bodyresponse.getId());
-	
+
 	}
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void updatePet() {
 		PetDataCreation dc = new PetDataCreation();
 		PetsController pc = new PetsController();
@@ -45,22 +45,20 @@ public class PetApiTests {
 		Assert.assertEquals(p.getId(), bodyreponse.getId());
 		Assert.assertEquals(p.getName(), bodyreponse.getName());
 		Assert.assertEquals(p.getStatus(), bodyreponse.getStatus());
-		
-	
+
 	}
 
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void findByStatus() {
 		String status = "sold";
 		PetsController pc = new PetsController();
 		Response response = pc.findByStatus(status);
 		int statuscode = response.statusCode();
 		Assert.assertEquals(statuscode, 200);
-	
 
 	}
 
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	public void findById() {
 
 		PetsController pc = new PetsController();
@@ -69,10 +67,10 @@ public class PetApiTests {
 		PetPojo bodyresponse = response.then().extract().response().as(PetPojo.class);
 		Assert.assertEquals(statuscode, 200);
 		Assert.assertEquals(dogId.get(0), bodyresponse.getId());
-		
+
 	}
 
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void updateForm() {
 
 		PetsController pc = new PetsController();
@@ -83,10 +81,10 @@ public class PetApiTests {
 		Assert.assertEquals(output.getCode(), 200);
 		String idAsString = Integer.toString(dogId.get(0));
 		Assert.assertEquals(output.getMessage(), idAsString);
-	
+
 	}
 
-	//@Test(priority = 5)
+	@Test(priority = 5)
 	public void uploadImage() {
 
 		PetsController pc = new PetsController();
@@ -97,7 +95,7 @@ public class PetApiTests {
 		Assert.assertEquals(statuscode, 200);
 		Assert.assertEquals(output.getCode(), 200);
 		Assert.assertEquals(output.getMessage().contains("File uploaded"), true);
-		
+
 	}
 
 	@Test(priority = 6)
@@ -112,8 +110,7 @@ public class PetApiTests {
 		UploadUpdateForm bodyresponse = verificationResponse.then().extract().response().as(UploadUpdateForm.class);
 		Assert.assertEquals(verificationStatusCode, 404);
 		String verificationText = "Pet not found";
-		Assert.assertEquals(bodyresponse.getMessage(),verificationText);
-	
+		Assert.assertEquals(bodyresponse.getMessage(), verificationText);
 
 	}
 }
