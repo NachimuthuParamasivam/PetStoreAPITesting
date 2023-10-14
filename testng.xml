@@ -8,6 +8,7 @@
     <classes>
       <class name="test.PetApiTests"/>
        <class name="test.StoreApiTests"/>
+       <class name="test.UserApiTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
