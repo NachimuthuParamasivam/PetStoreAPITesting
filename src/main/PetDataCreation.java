@@ -7,7 +7,6 @@ import java.util.Random;
 
 import pojo.PetPojo;
 import pojo.PetPojoSubCategory;
-import pojo.PetPojotags;
 
 public class PetDataCreation {
 
@@ -16,7 +15,6 @@ public class PetDataCreation {
 	{
 		PetPojo p = new PetPojo();
 		PetPojoSubCategory c = new PetPojoSubCategory();
-		PetPojotags t = new PetPojotags();
 		Random random = new Random();
 		int rand = random.nextInt(50000, 100000);
 		p.setId(rand);
@@ -30,6 +28,7 @@ public class PetDataCreation {
 		p.setCategory(c);
 
 		HashMap<String, String> tag = new HashMap<String, String>();
+
 		tag.put("id", "1");
 		tag.put("name", "abc");
 
@@ -46,8 +45,6 @@ public class PetDataCreation {
 	{
 		PetPojo p = new PetPojo();
 		PetPojoSubCategory c = new PetPojoSubCategory();
-		PetPojotags t = new PetPojotags();
-
 		p.setId(dogId);
 		p.setName("BullupdateDog");
 		p.setStatus("pending");
