@@ -19,7 +19,7 @@ public class StoreApiTests {
 	public List<Integer> orderId = new ArrayList<Integer>();
 
 	@Test(priority = 7, dependsOnMethods = "createPet")
-	public void placeOrder() {
+	public void storePlaceOrder() {
 
 		StoreDataCreation sdc = new StoreDataCreation();
 		StoreController sc = new StoreController();
@@ -34,7 +34,7 @@ public class StoreApiTests {
 	}
 
 	@Test(priority = 8)
-	public void findById() {
+	public void storeOrderFindById() {
 
 		StoreController sc = new StoreController();
 		Response response = sc.findById(orderId.get(0));
@@ -46,7 +46,7 @@ public class StoreApiTests {
 	}
 
 	@Test(priority = 9)
-	public void deleteById() {
+	public void storeOrderDeleteById() {
 
 		StoreController sc = new StoreController();
 		Response response = sc.deleteById(orderId.get(0));
@@ -66,7 +66,7 @@ public class StoreApiTests {
 	}
 
 	@Test(priority = 10)
-	public void inventory() {
+	public void storeInventory() {
 
 		StoreController sc = new StoreController();
 		Response response = sc.inventory();

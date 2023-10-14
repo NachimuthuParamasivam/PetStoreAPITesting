@@ -49,7 +49,7 @@ public class PetApiTests {
 	}
 
 	@Test(priority = 2)
-	public void findByStatus() {
+	public void petFindByStatus() {
 		String status = "sold";
 		PetsController pc = new PetsController();
 		Response response = pc.findByStatus(status);
@@ -59,7 +59,7 @@ public class PetApiTests {
 	}
 
 	@Test(priority = 3)
-	public void findById() {
+	public void petFindById() {
 
 		PetsController pc = new PetsController();
 		Response response = pc.findById(dogId.get(0));
@@ -71,7 +71,7 @@ public class PetApiTests {
 	}
 
 	@Test(priority = 4)
-	public void updateForm() {
+	public void petUpdateForm() {
 
 		PetsController pc = new PetsController();
 		Response response = pc.updateForm(dogId.get(0));
@@ -85,7 +85,7 @@ public class PetApiTests {
 	}
 
 	@Test(priority = 5)
-	public void uploadImage() {
+	public void petUploadImage() {
 
 		PetsController pc = new PetsController();
 		Response response = pc.uploadImage(dogId.get(0));
@@ -99,7 +99,7 @@ public class PetApiTests {
 	}
 
 	@Test(priority = 6)
-	public void deleteById() {
+	public void petDeleteById() {
 
 		PetsController pc = new PetsController();
 		Response response = pc.deleteById(dogId.get(0));
