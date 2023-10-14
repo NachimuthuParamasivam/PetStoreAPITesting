@@ -1,6 +1,17 @@
 Hi,
 
-This API automation is built on **Rest-Assured(Selenium-Java)** as a **Maven Project** with **TestNG** framework.
+This API automation is built on **Rest-Assured(Selenium-Java)** as a **Maven Project** with **TestNG** framework and it contains test cases for the below three modules
+
+1. Pet
+2. Store
+3. User
+
+**Below test cases are covered:**
+
+Pet module- CREATE pet, UPDATE pet, VIEW pet by status, VIEW pet by ID, UPDATE with form data, Update with image upload and Delete pet
+Store module-CREATE order, VIEW order by purchase id, DELETE order and VIEW Inventory
+User module- CREATE n number of users with Array,GET user, UPDATE user,DELETE user,User Login, User Logout
+   
 
 **How to run:**-
 
@@ -25,7 +36,9 @@ To run the tests in a CI use **Jenkins** to run the code available in Git Hub. P
 If the report is not in clear format go to Dashboard–>Manage Jenkins–>Script Console and add the script as:
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
 
-Note:The user module is not stable, the users created or not reflecting some times in GET request. But I have attached the report i
+Note:The user module is not stable, the users created are not reflecting some times in GET request. But I have attached the report with all test cases passed in the email.
+
+Please review the code and let me know if there is any chance for improvements.
 
 
 
