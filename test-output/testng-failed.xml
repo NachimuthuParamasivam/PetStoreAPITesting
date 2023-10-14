@@ -5,7 +5,7 @@
     <classes>
       <class name="test.PetApiTests">
         <methods>
-          <include name="uploadImage"/>
+          <include name="deleteById"/>
         </methods>
       </class> <!-- test.PetApiTests -->
     </classes>

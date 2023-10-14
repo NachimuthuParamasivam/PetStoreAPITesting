@@ -9,7 +9,7 @@ import pojo.PetPojo;
 import pojo.PetPojoSubCategory;
 import pojo.PetPojotags;
 
-public class DataCreation {
+public class PetDataCreation {
 
 	public PetPojo createData()
 
